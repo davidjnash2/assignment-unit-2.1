@@ -48,15 +48,14 @@ console.log( 'pets:', pets );
 
 
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
-let allowedPets = 2; //landlords r mean
+const allowedPets = 2; //landlords r mean
 console.log( 'allowedPets:', allowedPets );
 
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
 // if it's not true, console log "How about we stay home?"
 if( adventurous ){
     console.log ('Adventures are great!');
-}
-else{
+} else {
     console.log( 'How about we stay home?');
 } // end trip status
 
@@ -64,8 +63,7 @@ else{
 // console log "Roll the dice!"
 if( luckyNumber == 2 && adventurous){
     console.log( 'Roll the dice!' );
-}
-else{ 
+} else { 
     console.log( 'No such luck!');
 }
 
@@ -92,26 +90,24 @@ else if( pets > allowedPets ){
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 let mostPets;
-if( pets > friendsPets ){ mostPets = pets;
+if( pets >= friendsPets ){
+    mostPets = pets;
+} else if ( friendsPets > pets ){
+    mostPets = friendsPets;
 }
-else if( friendsPets > pets ){mostPets = friendsPets;
-}
-console.log ( 'mostPets:', mostPets );
 
 let leastPets;
-if( pets < friendsPets ){ leastPets = pets;
+if( pets <= friendsPets ){
+    leastPets = pets;
+} else if ( friendsPets < pets ){
+    leastPets = friendsPets;
 }
-else if( friendsPets < pets ){ leastPets = friendsPets;
-}
-console.log ( 'leastPets:', leastPets );
 
 if( pets < friendsPets ){
     console.log( 'Mike has so many pets! ' + mostPets + ', which is way more than my paltry ' + leastPets + '.');
- }
- else if( pets > friendsPets){
+ } else if ( pets > friendsPets){
     console.log( 'Mike is sad that his ' + leastPets + ' pets are fewer than my ' + mostPets + '.');
- }
- else if( pets == friendsPets ){
+ } else if (pets == friendsPets ){
     console.log( 'Mike and I have the same number of pets! ' + mostPets + '!' );
  }
 
